@@ -22,4 +22,4 @@ After one hot encoding, X train shape: (7352, 128, 9), y train shape: (7352, 6),
 Using LSTM
 Accuracy: 0.9006
 ```
-Change the number of lstm units, number of dense units, number of filters, and sizes of filters in the `models.py` file to experiment with various model architectures, and change the number of epochs, batch size, n_steps, and n_length to experiment with various training configurations.
+Change the number of lstm units, number of dense units, number of filters, and sizes of filters in the `models.py` file to experiment with various model architectures, and change the number of epochs, batch size, n_steps, and n_length in the `UCI-HAR.py` file to experiment with various training configurations.
