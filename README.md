@@ -8,12 +8,12 @@ Click here for the direct link: [UCI HAR Dataset.zip](https://archive.ics.uci.ed
 
 Unzip all files into a new directory in your current working directory. You should have a folder titled `UCI HAR Dataset`.
 
-Download the `UCI-HAR.py` and `models.py` files from this repository and move them into the directory containing the `UCI HAR Dataset` folder.
+Download the `uci_har.py` and `models.py` files from this repository and move them into the directory containing the `UCI HAR Dataset` folder.
 
 ## Usage
 The `models.py` contains implementations of a standard LSTM, a Convolutional Neural Network (CNN) that feeds into an LSTM, and a Convolutional LSTM. The difference between the CNN-LSTM and the ConvLSTM is that the CNN-LSTM uses CNN layers for feature extraction on input data and feeds the extracted features into an LSTM layer to support sequence prediction, while the ConvLSTM uses convolutions directly as part of reading input into the LSTM units themselves.
 
-Change the `model_type` on line 74 in `UCI-HAR.py` to 'lstm', 'cnnlstm', or 'convlstm' and run the program. You should see an output similar to the following:
+Change the `model_type` on line 74 in `uci_har.py` to 'lstm', 'cnnlstm', or 'convlstm' and run the program. You should see an output similar to the following:
 ```
 Using TensorFlow backend.
 X train shape: (7352, 128, 9), y train shape: (7352, 1)
@@ -22,4 +22,4 @@ After one hot encoding, X train shape: (7352, 128, 9), y train shape: (7352, 6),
 Using LSTM
 Accuracy: 0.9006
 ```
-Change the number of lstm units, number of dense units, number of filters, and sizes of filters in the `models.py` file to experiment with various model architectures, and change the number of epochs, batch size, n_steps, and n_length in the `UCI-HAR.py` file to experiment with various training configurations.
+Change the number of lstm units, number of dense units, number of filters, and sizes of filters in the `models.py` file to experiment with various model architectures, and change the number of epochs, batch size, n_steps, and n_length in the `uci_har.py` file to experiment with various training configurations.
